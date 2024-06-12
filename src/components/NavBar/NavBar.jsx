@@ -6,16 +6,30 @@ const NavBar = () => {
         <nav>
             <div class="header">
                 <div class="logo">
-                    <p>Logo</p>
+                    <img src="/assets/logo.jpg" alt="logo"></img>
                 </div>
                 <div class="menu">
-                    <Link to="/">Home</Link>
-                    <Link to="/cardapio">Cardápio</Link>
-                    <Link to="/lojas">Lojas</Link>
-                </div>            
+                    <div class="itemMenu">
+                        <Link to="/">HOME</Link>
+                    </div>
+                    <div class="itemMenu">
+                        <Link to="/cardapio">CARDÁPIO</Link>
+                    </div>
+                    <div class="itemMenu">
+                        <Link to="/lojas">LOJAS</Link>
+                    </div>
+                </div>
+                <div class="rede-social">
+                    <div>
+                        <img src="/assets/instagram.svg" alt="banner"></img>
+                    </div>
+                    <div>
+                        <img src="/assets/facebook.svg" alt="banner"></img>
+                    </div>
+                </div>        
             </div>            
-            <div class="banner">
-                <img src="..\..\assets\banner.jpg" alt="banner"></img>
+            <div class="banner" alt="banner"
+                style={{backgroundImage: `url("/assets/banner.png")`, backgroundSize: 'cover'}}>                
             </div>
         </nav>
     );

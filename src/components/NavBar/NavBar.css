@@ -1,25 +1,54 @@
 
 .header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 88px;
-    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 154px auto 100px;    
+    height: 68px;   
+    margin-left: 120px;
+    margin-right: 120px;
+    align-content: center;
 
     .logo{
-        width: 100px;
-        border: 1px solid red;
+        width: 152.26px;
+        height: 40px;          
     }
 
     .menu{
-        width: calc(100% - 100px);
-        border: 1px solid red;
+        width: auto;
+        height: 100%;        
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .rede-social{
+        display: flex;
+        flex-direction: row;        
+        gap: 16px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: 24px;
+            height: 24px;            
+        }
     }
 }
 
-.banner{
-    color: red;
-    border: 1px solid red;
-    width: 100%;
-    height: 300px;
+.itemMenu{
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;    
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;       
 }
+
+.banner{    
+    width: 100%;
+    height: 220px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
