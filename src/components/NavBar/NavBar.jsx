@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import './NavBar.css';
+import ItemMenu from "../ItemMenu/ItemMenu";
 
 const NavBar = () => {
     return (
@@ -8,16 +8,10 @@ const NavBar = () => {
                 <div class="logo">
                     <img src="/assets/logo.jpg" alt="logo"></img>
                 </div>
-                <div class="menu">
-                    <div class="itemMenu">
-                        <Link to="/">HOME</Link>
-                    </div>
-                    <div class="itemMenu">
-                        <Link to="/cardapio">CARDÁPIO</Link>
-                    </div>
-                    <div class="itemMenu">
-                        <Link to="/lojas">LOJAS</Link>
-                    </div>
+                <div class="menu">                    
+                    <ItemMenu linkto={"/"} texto={"HOME"}></ItemMenu>
+                    <ItemMenu linkto={"/cardapio"} texto={"CARDÁPIO"}></ItemMenu>
+                    <ItemMenu linkto={"/lojas"} texto={"LOJAS"}></ItemMenu>                    
                 </div>
                 <div class="rede-social">
                     <div>

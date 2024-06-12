@@ -1,7 +1,10 @@
 import React from "react";
+import TituloPagina from "../components/TituloPagina/TituloPagina";
 
 const Cardapio = () => {
-    return (<div>Cardapio</div>);
+    return (
+        <TituloPagina texto={"Cardápio"}></TituloPagina>
+    );
 }
 
 export default Cardapio
