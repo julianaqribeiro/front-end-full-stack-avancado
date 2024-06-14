@@ -4,7 +4,7 @@ import './ItemMenu.css';
 const ItemMenu = ({linkto, texto}) => {
 
     return (
-        <div class="itemMenu">
+        <div className="itemMenu">
             <Link to={linkto}>{texto}</Link>
         </div>
     );

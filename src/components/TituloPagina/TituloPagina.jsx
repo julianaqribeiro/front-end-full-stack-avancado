@@ -5,7 +5,7 @@ const TituloPagina = ({texto}) => {
 
     return (
         <div class="container-titulo">
-            <span class="titulo">{ texto }</span>
+            <span className="texto">{ texto }</span>
         </div>
     );
 }

@@ -1,11 +1,11 @@
 import './NavBar.css';
-import ItemMenu from "../ItemMenu/ItemMenu";
+import ItemMenu from "../itemMenu/ItemMenu";
 
 const NavBar = () => {
     return (
         <nav>
-            <div class="header">
-                <div class="logo">
+            <div className="header">
+                <div className="logo">
                     <img src="/assets/logo.jpg" alt="logo"></img>
                 </div>
                 <div class="menu">                    
@@ -13,7 +13,7 @@ const NavBar = () => {
                     <ItemMenu linkto={"/cardapio"} texto={"CARDÁPIO"}></ItemMenu>
                     <ItemMenu linkto={"/lojas"} texto={"LOJAS"}></ItemMenu>                    
                 </div>
-                <div class="rede-social">
+                <div className="rede-social">
                     <div>
                         <img src="/assets/instagram.svg" alt="banner"></img>
                     </div>
@@ -22,7 +22,7 @@ const NavBar = () => {
                     </div>
                 </div>        
             </div>            
-            <div class="banner" alt="banner"
+            <div className="banner" alt="banner"
                 style={{backgroundImage: `url("/assets/banner.png")`, backgroundSize: 'cover'}}>                
             </div>
         </nav>
