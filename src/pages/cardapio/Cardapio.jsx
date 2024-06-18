@@ -1,11 +1,11 @@
 import React from "react";
-import TituloPagina from "../../components/tituloPagina/TituloPagina";
+import TituloPrincipal from "../../components/tituloPrincipal/TituloPrincipal";
 import './Cardapio.css';
 
 const Cardapio = () => {
     return (
         <div>
-            <TituloPagina texto={"Cardápio"}></TituloPagina>
+            <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
         </div>
     );
 }

@@ -1,5 +1,7 @@
 .container{
-    display: grid;
-    grid-template-columns:  371.22px  371.22px;
+    display: flex;
+    flex-direction: row;
     gap: 43px;
+    justify-content: center;
+    margin-top: 56px;
 }

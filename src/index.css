@@ -1,12 +1,45 @@
+
+/* Roboto Black */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 900; 
+  font-style: normal;
+}
+
+/* Roboto Black */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900; /* Black weight is typically 900 */
+  font-style: normal;
+}
+
+/* Roboto Black Italic */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-BlackItalic.ttf") format("truetype");
+  font-weight: 900; /* Black weight is typically 900 */
+  font-style: italic;
+}
+
+/* Roboto Bold */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold weight is typically 700 */
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-   'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Courier New',
+ font-family: "Roboto",
     monospace;
 }

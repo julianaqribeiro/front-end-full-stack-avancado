@@ -1,7 +1,9 @@
 import TituloSecundario from '../tituloSecundario/TituloSecundario';
 import './CardPagina.css';
 
-const CardPagina = ({titulo, pathImagem, descricao, textButton}) => {
+const CardPagina = ({titulo, background, descricao, textButton, handleClick}) => {
+    
+    const onClick = handleClick;
 
     return (
         <div className="container-card">
@@ -9,13 +11,13 @@ const CardPagina = ({titulo, pathImagem, descricao, textButton}) => {
                 <TituloSecundario texto={titulo}></TituloSecundario>
             </div>
             <div className="div-imagem"
-                style={{backgroundImage: { pathImagem }, backgroundSize: 'cover'}}>                 
+                style={{backgroundImage: "url(" + background + ")", backgroundSize: 'cover'}}>                 
             </div>
             <div className="div-descricao">
                 <span className="texto-descricao">{ descricao }</span>
             </div>
             <div className="div-botao">
-                <button type="button" className='botao'>{ textButton }</button>
+                <button type="button" className='botao' onClick={onClick}>{ textButton.toUpperCase() }</button>
             </div>
         </div>        
     );

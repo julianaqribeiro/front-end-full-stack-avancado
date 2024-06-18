@@ -1,10 +1,10 @@
 import React from "react";
-import TituloPagina from "../components/tituloPagina/TituloPagina"; 
+import TituloPrincipal from "../components/tituloPrincipal/TituloPrincipal"; 
 
 const Lojas = () => {
     return (
         <div>
-            <TituloPagina texto={"Lojas"}></TituloPagina>
+            <TituloPrincipal texto={"Lojas"}></TituloPrincipal>
         </div>
     );        
 }

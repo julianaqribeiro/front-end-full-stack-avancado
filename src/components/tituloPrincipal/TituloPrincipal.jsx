@@ -1,7 +1,7 @@
 
-import './TituloPagina.css';
+import './TituloPrincipal.css';
 
-const TituloPagina = ({texto}) => {
+const TituloPrincipal = ({texto}) => {
 
     return (
         <div class="container-titulo">
@@ -10,4 +10,4 @@ const TituloPagina = ({texto}) => {
     );
 }
 
-export default TituloPagina
+export default TituloPrincipal

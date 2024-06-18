@@ -5,37 +5,44 @@
     width: 371.22px;
     height: 360px;
     border-radius: 4px;
-    border: 2px solid #F5F5F5;    
+    border: 2px solid #F5F5F5;
+    background-color: #F5F5F5;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.14);
 }
 
 .div-titulo{
     height: 50px;
-    width: 100%;
-    border: 1px solid red;
-    align-self: center;
+    width: 100%;    
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
 }
 
 .div-imagem{
     height: 194px;
-    width: 100%;
+    width: 100%;    
 }
 
 .div-descricao{
     height: 72px;
     width: 100%;
-    margin-left: 8px;
+    padding: 16px;
 }
 
-.texto-descricao{
+.texto-descricao{  
+    font-weight: normal; 
     color: rgba(0, 0, 0, 0.6);
     font-size: 14px;
     letter-spacing: 0.25px;
-    line-height: 20px;    
+    line-height: 20px;
 }
 
 .div-botao{
     height: 44px;
     width: 100%;
+    padding-left: 8px;
+    padding-bottom: 8px;
 }
 
 .botao{
@@ -44,6 +51,7 @@
     background-color: #ED5D3C;
     color: white;
     border: 0px;
-    margin-left: 8px;
+    border-radius: 4px;
+    letter-spacing: 1.25px;
 }
 
