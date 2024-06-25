@@ -1,6 +1,29 @@
 {
   "categorias": [
     {
+        "itens": [
+          {
+            "descricao": "Delicioso prato de Filé de Frango, acompanhado por arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada. Uma refeição que agrada a todos os paladares!",
+            "id": 4,
+            "nome": "Brasileirinho de Frango",
+            "preco": "R$ 47.90"
+          },
+          {
+            "descricao": "Filé Mignon suculento, arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada. Um banquete que atende a todos os gostos!\r\n\r\n",
+            "id": 5,
+            "nome": "Brasileirinho de Filé Mignon",
+            "preco": "R$ 55.00"
+          },
+          {
+            "descricao": "Refeição completa com suculento Baby Beef, arroz, feijão, batatas fritas e a opção de escolher entre uma deliciosa farofa ou uma refrescante salada. Uma refeição que satisfaz todos os desejos!\r\n\r\n",
+            "id": 6,
+            "nome": "Brasileirinho de Baby Beef",
+            "preco": "R$ 51.50"
+          }
+        ],
+        "nome": "Entrada"
+    },    
+    {
       "itens": [
         {
           "descricao": "Delicioso prato de Filé de Frango, acompanhado por arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada. Uma refeição que agrada a todos os paladares!",

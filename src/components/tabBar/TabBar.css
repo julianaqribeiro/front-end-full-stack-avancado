@@ -1,10 +1,4 @@
 
-.container-tabBar{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
 .tabBar{
     display: flex;
     flex-direction: row;

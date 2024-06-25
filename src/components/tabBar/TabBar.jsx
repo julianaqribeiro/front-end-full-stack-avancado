@@ -1,24 +1,25 @@
 import './TabBar.css';
 import { useState } from 'react';
-import TituloSecudario from '../tituloSecundario/TituloSecundario'
 
-const TabBar = ({ itens }) => {
 
-    const [itemSelecionado, setItemSelecionado] = useState([""])
+const TabBar = ({ itens, getCategoriaSelecionada }) => {
+
+    const [itemSelecionado, setItemSelecionado] = useState();
+
+    function clickBotao(item){                
+        setItemSelecionado(item.toUpperCase());
+        getCategoriaSelecionada(item.toUpperCase());
+    }
 
     return ( 
-        <div class="container-tabBar">
-            <div className="tabBar">
-            {                 
-                itens.map((item, idx) => 
-                    <button type="button" className='botao-tabBar' key={`item-${idx}`} onClick={() => setItemSelecionado(item.toUpperCase()) }>{ item.toUpperCase() }
-                    </button>)                
-            }            
-            </div>   
-            <div>
-                <TituloSecudario texto={ itemSelecionado }></TituloSecudario> 
-            </div>
-        </div>                                  
+        
+        <div className="tabBar">
+        {                 
+            itens.map((item, idx) => 
+                <button type="button" className='botao-tabBar' key={`item-${idx}`} onClick={() => clickBotao(item.toUpperCase()) }>{ item.toUpperCase() }
+                </button>)                
+        }            
+        </div>                                                       
     );
 }
 
