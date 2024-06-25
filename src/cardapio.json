@@ -1,0 +1,67 @@
+{
+  "categorias": [
+    {
+      "itens": [
+        {
+          "descricao": "Delicioso prato de Filé de Frango, acompanhado por arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada. Uma refeição que agrada a todos os paladares!",
+          "id": 4,
+          "nome": "Brasileirinho de Frango",
+          "preco": "R$ 47.90"
+        },
+        {
+          "descricao": "Filé Mignon suculento, arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada. Um banquete que atende a todos os gostos!\r\n\r\n",
+          "id": 5,
+          "nome": "Brasileirinho de Filé Mignon",
+          "preco": "R$ 55.00"
+        },
+        {
+          "descricao": "Refeição completa com suculento Baby Beef, arroz, feijão, batatas fritas e a opção de escolher entre uma deliciosa farofa ou uma refrescante salada. Uma refeição que satisfaz todos os desejos!\r\n\r\n",
+          "id": 6,
+          "nome": "Brasileirinho de Baby Beef",
+          "preco": "R$ 51.50"
+        }
+      ],
+      "nome": "Almoço Executivo "
+    },
+    {
+      "itens": [
+        {
+          "descricao": "Laranja, Abacaxi, Tangerina",
+          "id": 2,
+          "nome": "Suco Natural",
+          "preco": "R$ 12.50"
+        },
+        {
+          "descricao": "Mate da Casa com Limão",
+          "id": 9,
+          "nome": "Mate com Limão",
+          "preco": "R$ 13.90"
+        },
+        {
+          "descricao": "Coca-cola, Guaraná, Fanta e Sprite",
+          "id": 10,
+          "nome": "Refrigerante",
+          "preco": "R$ 12.50"
+        }
+      ],
+      "nome": "Bebida"
+    },
+    {
+      "itens": [
+        {
+          "descricao": "Combinação refrescante de sabores naturais. (500ml)",
+          "id": 7,
+          "nome": "Salada de Frutas",
+          "preco": "R$ 20.00"
+        },
+        {
+          "descricao": "Doce equilibrado, massa nutritiva. Uma escolha saudável e deliciosa!",
+          "id": 8,
+          "nome": "Torta de Banana Integral",
+          "preco": "R$ 29.90"
+        }
+      ],
+      "nome": "Sobremesa"
+    }
+  ]
+}
