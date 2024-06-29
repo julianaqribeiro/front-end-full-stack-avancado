@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home/Home.jsx';
 import Cardapio from './pages/cardapio/Cardapio.jsx';
-import Lojas from './pages/Lojas';
+import Lojas from './pages/loja/Lojas';
 
 const router = createBrowserRouter([
   { path:"/", 

@@ -51,19 +51,19 @@ const Cardapio = () => {
             <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
             <div class="container-tabBar">
                 <div>
-                    <TabBar itens = { categorias } itemFoco={ categorias[0] } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
+                    <TabBar itens = { categorias } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
                 </div>
                 <div>
                     <TituloSecudario texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
                 </div> 
-                <div class="container-itens-cardapio">                 
+                <div class="container-itens-cardapio">
                 {                                 
                     itensCardapio.map((item) => 
                         <ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio>
                     )
-                }                   
-                </div>               
-            </div>            
+                }
+                </div>
+            </div>
         </div>
     );
 }

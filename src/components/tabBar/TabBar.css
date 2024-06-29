@@ -14,7 +14,7 @@
 
 .botao-tabBar{
     height: 30px;   
-    background-color: white;
+    background: white;
     color:  #ED5D3C;
     border: 2px solid #ED5D3C;   
     border-radius: 4px;
@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-.botao-tabBar:visited{        
+.botao-tabBar:focus{        
     background-color: #ED5D3C;   
     color: white;
 }

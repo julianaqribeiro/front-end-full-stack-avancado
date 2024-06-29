@@ -1,0 +1,15 @@
+.container-tabBar{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;    
+}
+
+.card-loja{
+    display: flex;
+    flex-direction: column;
+}
+
+.loja{
+    display: flex;
+    flex-direction: row;
+}

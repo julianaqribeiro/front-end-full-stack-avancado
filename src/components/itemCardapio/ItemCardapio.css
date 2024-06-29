@@ -2,9 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    border: 1px solid rgba(151, 151, 151, 0.53);
-    align-items: center;
-    padding: 16px;
+    border: 1px solid rgba(151, 151, 151, 0.53);    
     border-radius: 16px;    
     width: 100%;
 }
@@ -14,12 +12,14 @@
     flex-direction: column;        
     gap: 16px;
     color: rgba(95, 99, 104, 1);
+    padding: 16px;
+    width: 100%;
 }
 
 .nome-item{
-    font-weight: bold;    
+    font-weight: bold;            
 }
 
 .preco-item{    
-    font-weight: bold;
+    font-weight: bold;    
 }

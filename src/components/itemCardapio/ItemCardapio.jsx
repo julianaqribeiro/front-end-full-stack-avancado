@@ -9,7 +9,7 @@ const ItemCardapio = ({nome, descricao, preco}) => {
                     <span>{ nome }</span>
                 </div>
                 <div>
-                    <div>{ descricao }</div>                    
+                    <span>{ descricao }</span>                    
                 </div>
                 <div className="preco-item">
                     <span>{ preco }</span>
