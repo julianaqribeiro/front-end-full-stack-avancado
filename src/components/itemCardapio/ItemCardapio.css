@@ -1,0 +1,25 @@
+.container-item-cardapio{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid rgba(151, 151, 151, 0.53);
+    align-items: center;
+    padding: 16px;
+    border-radius: 16px;    
+    width: 100%;
+}
+
+.item-cardapio{
+    display: flex;
+    flex-direction: column;        
+    gap: 16px;
+    color: rgba(95, 99, 104, 1);
+}
+
+.nome-item{
+    font-weight: bold;    
+}
+
+.preco-item{    
+    font-weight: bold;
+}

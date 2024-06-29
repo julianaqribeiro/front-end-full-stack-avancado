@@ -1,5 +1,12 @@
 .container-tabBar{
     display: flex;
     flex-direction: column;
+    gap: 16px;    
+}
+
+.container-itens-cardapio{
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+    width: 100%;      
 }
