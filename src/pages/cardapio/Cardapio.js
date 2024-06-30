@@ -49,14 +49,14 @@ const Cardapio = () => {
     return (
         <div>
             <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
-            <div class="container-tabBar">
+            <div className="container-tabBar">
                 <div>
                     <TabBar itens = { categorias } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
                 </div>
                 <div>
                     <TituloSecudario texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
                 </div> 
-                <div class="container-itens-cardapio">
+                <div className="container-itens-cardapio">
                 {                                 
                     itensCardapio.map((item) => 
                         <ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio>

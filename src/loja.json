@@ -2,7 +2,7 @@
     "lojas": [
         {
             "nome": "Loja Barra Shopping",
-            "endereço": "Av. das Américas, 4666 - Loja 150",
+            "endereco": "Av. das Américas, 4666 - Loja 150",
             "bairro": "Barra da Tijuca",
             "cidade": "Rio de Janeiro",
             "UF": "RJ",
@@ -10,11 +10,11 @@
             "funcionamentoSegSab": "Segunda a sábado de 11:00 às 22:00hs",
             "funcionamentoDomFeriado": "domingo e feriados de 11:00 às 21:00hs",
             "telefones":"(21) 2275-9999 / Wapp (21) 2541-9999",
-            "imagem": ""
+            "imagem": "/assets/lojaBarra.jpeg"
         },
         {
             "nome": "Loja Plaza Shopping",
-            "endereço": "Rua Quinze de Novembro, 8 - LOJA 323A",
+            "endereco": "Rua Quinze de Novembro, 8 - LOJA 323A",
             "bairro": "Centro",
             "cidade": "Niterói",
             "UF": "RJ",
@@ -22,11 +22,11 @@
             "funcionamentoSegSab": "Segunda a sábado de 11:00 às 22:00hs",
             "funcionamentoDomFeriado": "domingo e feriados de 11:00 às 21:00hs",
             "telefones":"(21) 2275-9999 / Wapp (21) 2541-9999",
-            "imagem": ""
+            "imagem": "/assets/lojaPlaza.jpeg"
         },
         {
             "nome": "Loja Rio Sul",
-            "endereço": "Av. Lauro Sodré, 445, 4º piso, Loja 1A",
+            "endereco": "Av. Lauro Sodré, 445, 4º piso, Loja 1A",
             "bairro": "Botafogo",
             "cidade": "Rio de Janeiro",
             "UF": "RJ",
@@ -34,7 +34,7 @@
             "funcionamentoSegSab": "Segunda a sábado de 11:00 às 22:00hs",
             "funcionamentoDomFeriado": "domingo e feriados de 11:00 às 21:00hs",
             "telefones":"(21) 2275-9999 / Wapp (21) 2541-9999",
-            "imagem": ""
+            "imagem": "/assets/lojaRioSul.jpeg"
         }        
     ]
 }

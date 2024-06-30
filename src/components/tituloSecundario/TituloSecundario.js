@@ -10,7 +10,7 @@ const TituloSecundario = ({texto}) => {
       }, [texto]);
 
     return (
-        <div class="container-titulo-secundario">
+        <div className="container-titulo-secundario">
             <span className="texto-secundario">{ titulo }</span>
         </div>
     );

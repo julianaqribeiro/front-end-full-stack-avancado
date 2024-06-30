@@ -4,7 +4,7 @@ import './TituloPrincipal.css';
 const TituloPrincipal = ({texto}) => {
 
     return (
-        <div class="container-titulo">
+        <div className="container-titulo">
             <span className="texto">{ texto }</span>
         </div>
     );

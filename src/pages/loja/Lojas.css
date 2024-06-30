@@ -7,9 +7,56 @@
 .card-loja{
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    height: 194px;
 }
 
 .loja{
     display: flex;
     flex-direction: row;
+    height: 100%;
+}
+
+.imagem-loja{
+    height: 194px;
+    width: 194px;       
+}
+
+.info-loja{
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.texto-destaque{
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;  
+    height: 61px;   
+    font-weight: bold;  
+}
+
+.horario{
+    display: flex;
+    flex-direction: column;   
+    height: 99px; 
+}
+
+.telefone{
+    display: flex;
+    flex-direction: column;
+    height: 62px;
 }
