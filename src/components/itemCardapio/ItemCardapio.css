@@ -10,16 +10,7 @@
 .item-cardapio{
     display: flex;
     flex-direction: column;        
-    gap: 16px;
-    color: rgba(95, 99, 104, 1);
+    gap: 16px;    
     padding: 16px;
     width: 100%;
-}
-
-.nome-item{
-    font-weight: bold;            
-}
-
-.preco-item{    
-    font-weight: bold;    
 }

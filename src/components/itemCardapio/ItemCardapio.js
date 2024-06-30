@@ -1,3 +1,5 @@
+import TextoDescricao from '../textoDescricao/TextoDescricao';
+import TextoDestaque from '../textoDestaque/TextoDestaque';
 import './ItemCardapio.css';
 
 const ItemCardapio = ({nome, descricao, preco}) => {
@@ -5,14 +7,14 @@ const ItemCardapio = ({nome, descricao, preco}) => {
     return (
         <div className="container-item-cardapio">
             <div className="item-cardapio">
-                <div className="nome-item">
-                    <span>{ nome }</span>
+                <div>
+                    <TextoDestaque texto={nome}></TextoDestaque>
                 </div>
                 <div>
-                    <span>{ descricao }</span>                    
+                    <TextoDescricao texto={descricao}></TextoDescricao>                 
                 </div>
-                <div className="preco-item">
-                    <span>{ preco }</span>
+                <div>
+                    <TextoDestaque texto={preco}></TextoDestaque>
                 </div>                             
             </div>                       
         </div>        

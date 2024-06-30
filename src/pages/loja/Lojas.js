@@ -5,6 +5,8 @@ import TituloPrincipal from "../../components/tituloPrincipal/TituloPrincipal";
 import TituloSecudario from '../../components/tituloSecundario/TituloSecundario';
 import TabBar from "../../components/tabBar/TabBar"; 
 import './Lojas.css';
+import TextoDestaque from "../../components/textoDestaque/TextoDestaque";
+import TextoDescricao from "../../components/textoDescricao/TextoDescricao";
 
 const Lojas = () => {
 
@@ -62,27 +64,27 @@ const Lojas = () => {
                     </div>                    
                     <div className="loja">
                         <div className="imagem-loja" style={{backgroundImage: "url(" + lojaSelecionada?.imagem + ")", backgroundSize: 'cover'}}>                            
-                        </div>
-                        
+                        </div>                        
                         <div className="info-loja">
                             <div className="endereco">
-                                <div>{ lojaSelecionada?.endereco }</div>
-                                <div>{ lojaSelecionada?.bairro + ", " + lojaSelecionada?.cidade +" - " + lojaSelecionada?.UF + ", " + lojaSelecionada?.cep} </div>
+                                <div><TextoDestaque texto={ lojaSelecionada?.endereco }></TextoDestaque></div>
+                                <div>
+                                    <TextoDestaque texto={ lojaSelecionada?.bairro + ", " + lojaSelecionada?.cidade +" - " + lojaSelecionada?.UF + ", " + lojaSelecionada?.cep}>
+                                    </TextoDestaque>
+                                </div>
                             </div>
                             <div className="horario">
                                 <div className="texto-destaque">
-                                    <img src="/assets/Clock.jpg" width="24px" height="24px" alt="horario"></img>
-                                    <span>Horário de Funcionamento:</span>                                
+                                    <TextoDestaque imagem="/assets/Clock.jpg" texto="Horário de Funcionamento:"></TextoDestaque>
                                 </div>
-                                <div>{ lojaSelecionada?.funcionamentoSegSab }</div>
-                                <div>{ lojaSelecionada?.funcionamentoDomFeriado }</div>
+                                <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.funcionamentoSegSab }></TextoDescricao></div>
+                                <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.funcionamentoDomFeriado }></TextoDescricao></div>
                             </div>
                             <div className="telefone">
-                                <div className="texto-destaque">
-                                    <img src="/assets/Phone.jpg" width="24px" height="24px" alt="horario"></img>
-                                    <span>Telefone:</span> 
+                                <div className="texto-destaque">                                    
+                                    <TextoDestaque imagem="/assets/Phone.jpg" texto="Telefone:"></TextoDestaque>
                                 </div>
-                                <div>{ lojaSelecionada?.telefones }</div>                                
+                                <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.telefones }></TextoDescricao></div>                                
                             </div>
                         </div>
                     </div>                    
