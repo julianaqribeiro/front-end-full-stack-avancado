@@ -15,10 +15,10 @@ const NavBar = () => {
                 </div>
                 <div className="rede-social">
                     <div>
-                        <img src="/assets/instagram.svg" alt="banner"></img>
+                        <img src="/assets/instagram.svg" alt="instagram"></img>
                     </div>
                     <div>
-                        <img src="/assets/facebook.svg" alt="banner"></img>
+                        <img src="/assets/facebook.svg" alt="facebbok"></img>
                     </div>
                 </div>        
             </div>            

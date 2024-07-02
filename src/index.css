@@ -43,7 +43,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
+  height: 100vh;
+  position: relative;
 }
 
 code {

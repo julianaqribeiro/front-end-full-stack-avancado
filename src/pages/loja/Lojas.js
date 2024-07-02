@@ -54,7 +54,7 @@ const Lojas = () => {
     return (
         <div>
             <TituloPrincipal texto={"Nossas Lojas"}></TituloPrincipal>
-            <div className="container-tabBar">
+            <div className="container-loja">
                 <div>
                     <TabBar itens = { lojas } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
                 </div>                

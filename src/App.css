@@ -1,4 +1,66 @@
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
 .outlet{   
   margin-left: 120px;
-  margin-right: 120px;       
+  margin-right: 120px;
+  height: calc(100% - 48px); /* Leva em consideração a altura do cabeçalho e do rodapé */
+  padding-bottom: 48px; /* Leva em consideração a altura do rodapé */
+  /* overflow: auto;  Permite a rolagem do conteúdo caso exceda o tamanho da tela */
+}
+
+.rodape {
+  background-color: #00AF66;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 48px; /* Define a altura do rodapé */
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+  gap: 32px;
+  color: white;
+  line-height: 16px; 
+  font-style: normal;
+  letter-spacing: 1.25px;  
+  font-size: 12px;
+  font-family: "Roboto";
+  
+  .logo{
+    width: 152.26px;
+    height: 40px; 
+    margin-left: 120px;          
+  }
+
+  .mapa{
+    display: flex;
+    flex-direction: column;    
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+    line-height: 16px; 
+    font-style: normal;
+    letter-spacing: 1.25px;  
+    font-size: 12px;
+    font-family: "Roboto";
+  }  
+  
+  .redes-sociais{
+    color: white;
+    text-decoration: none; 
+    
+    img{
+      width: 24px;
+      height: 24px;            
+    }
+
+    .icones{
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
