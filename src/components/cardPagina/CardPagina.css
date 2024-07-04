@@ -2,8 +2,8 @@
 .container-card{
     display: flex;
     flex-direction: column;    
-    width: 371.22px;
-    height: 360px;
+    width: 340px;
+    height: auto;
     border-radius: 4px;
     border: 2px solid #F5F5F5;
     background-color: #F5F5F5;
@@ -11,12 +11,12 @@
 }
 
 .div-titulo{
-    height: 50px;
+    height: auto;
     width: 100%;    
     display: flex;  
     align-items: center;
-    justify-content: center;
-    margin-left: 8px;
+    justify-content: center;    
+    padding: 8px;
 }
 
 .div-imagem{
@@ -25,9 +25,9 @@
 }
 
 .div-descricao{
-    height: 72px;
+    height: 40px;
     width: 100%;
-    padding: 16px;
+    padding: 16px;    
 }
 
 .texto-descricao{  
@@ -36,10 +36,11 @@
     font-size: 14px;
     letter-spacing: 0.25px;
     line-height: 20px;
+    width: 300px;
 }
 
 .div-botao{
-    height: 44px;
+    height: auto;
     width: 100%;
     padding-left: 8px;
     padding-bottom: 8px;

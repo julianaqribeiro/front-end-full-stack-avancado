@@ -1,14 +1,14 @@
-.main{
-  display: flex;
-  flex-direction: column;
+.page{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .outlet{   
   margin-left: 120px;
   margin-right: 120px;
-  height: calc(100% - 48px); /* Leva em consideração a altura do cabeçalho e do rodapé */
+  height: calc(100% - 80px); /* Leva em consideração a altura do cabeçalho e do rodapé */
   padding-bottom: 48px; /* Leva em consideração a altura do rodapé */
-  /* overflow: auto;  Permite a rolagem do conteúdo caso exceda o tamanho da tela */
 }
 
 .rodape {
@@ -18,36 +18,17 @@
   width: 100%;
   height: 48px; /* Define a altura do rodapé */
   display: flex;
-  flex-direction: row;
-  padding-top: 8px;
-  gap: 32px;
+  flex-direction: column;
+  padding: 16px 0px 16px 0px;
+  gap: 8px;
   color: white;
   line-height: 16px; 
   font-style: normal;
   letter-spacing: 1.25px;  
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Roboto";
-  
-  .logo{
-    width: 152.26px;
-    height: 40px; 
-    margin-left: 120px;          
-  }
-
-  .mapa{
-    display: flex;
-    flex-direction: column;    
-  }
-
-  a{
-    color: white;
-    text-decoration: none;
-    line-height: 16px; 
-    font-style: normal;
-    letter-spacing: 1.25px;  
-    font-size: 12px;
-    font-family: "Roboto";
-  }  
+  align-items: center;
+  justify-items: center;
   
   .redes-sociais{
     color: white;
@@ -61,6 +42,7 @@
     .icones{
       display: flex;
       flex-direction: row;
+      gap: 16px;
     }
   }
 }
