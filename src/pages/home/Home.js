@@ -15,21 +15,19 @@ const Home = () => {
     navigate("/lojas");        
 };
 
-    return (
-        <div>
-            <div className="container">
-                <div>            
-                    <CardPagina titulo={"Cardápio"} textButton={"Cardápio"} background={"/assets/img-cardapio.jpg"}
-                        descricao={"Confira nossos pratos, que podem mudar ao longo do dia."} handleClick={goToCardapio}>                
-                    </CardPagina>
-                </div>
-                <div>
-                    <CardPagina titulo={"Lojas"} textButton={"Lojas"} background={"/assets/lojas.jpg"}
-                        descricao={"Veja a loja mais próxima de vc e venha nos visitar."} handleClick={goToLojas}>
-                    </CardPagina>
-                </div>
-            </div>            
-        </div>
+    return (            
+        <div className="container">
+            <div>            
+                <CardPagina titulo={"Cardápio"} textButton={"Cardápio"} background={"/assets/img-cardapio.jpg"}
+                    descricao={"Confira nossos pratos, que podem mudar ao longo do dia."} handleClick={goToCardapio}>                
+                </CardPagina>
+            </div>
+            <div>
+                <CardPagina titulo={"Lojas"} textButton={"Lojas"} background={"/assets/lojas.jpg"}
+                    descricao={"Veja a loja mais próxima de vc e venha nos visitar."} handleClick={goToLojas}>
+                </CardPagina>
+            </div>
+        </div>                    
     );
 }
 

@@ -2,7 +2,7 @@
 .container-card{
     display: flex;
     flex-direction: column;    
-    width: 340px;
+    width: auto;
     height: auto;
     border-radius: 4px;
     border: 2px solid #F5F5F5;
@@ -26,8 +26,8 @@
 
 .div-descricao{
     height: 40px;
-    width: 100%;
-    padding: 16px;    
+    width: 340px;
+    margin: 16px; 
 }
 
 .texto-descricao{  
@@ -35,8 +35,7 @@
     color: rgba(0, 0, 0, 0.6);
     font-size: 14px;
     letter-spacing: 0.25px;
-    line-height: 20px;
-    width: 300px;
+    line-height: 20px;    
 }
 
 .div-botao{

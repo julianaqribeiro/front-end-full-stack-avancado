@@ -19,7 +19,7 @@ const NavBar = () => {
                     </div>
                     <div>
                         <img src="/assets/facebook.svg" alt="facebbok"></img>
-                    </div>
+                    </div>                 
                 </div>        
             </div>            
             <div className="banner" alt="banner"

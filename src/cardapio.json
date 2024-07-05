@@ -1,87 +1,105 @@
 {
   "categorias": [
     {
-        "itens": [
-          {
-            "descricao": "Delicioso prato de Filé de Frango, acompanhado por arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada.",
-            "id": 4,
-            "nome": "Brasileirinho de Frango",
-            "preco": "R$ 47.90"
-          },
-          {
-            "descricao": "Filé Mignon suculento, arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada.",
-            "id": 5,
-            "nome": "Brasileirinho de Filé Mignon",
-            "preco": "R$ 55.00"
-          },
-          {
-            "descricao": "Refeição completa com suculento Baby Beef, arroz, feijão, batatas fritas e a opção de escolher entre uma deliciosa farofa ou uma refrescante salada.",
-            "id": 6,
-            "nome": "Brasileirinho de Baby Beef",
-            "preco": "R$ 51.50"
-          },
-          {
-            "descricao": "Delicioso prato de Filé de Frango, acompanhado por arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada.",
-            "id": 4,
-            "nome": "Brasileirinho de Frango",
-            "preco": "R$ 47.90"
-          },
-          {
-            "descricao": "Filé Mignon suculento, arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada.",
-            "id": 5,
-            "nome": "Brasileirinho de Filé Mignon",
-            "preco": "R$ 55.00"
-          },
-          {
-            "descricao": "Refeição completa com suculento Baby Beef, arroz, feijão, batatas fritas e a opção de escolher entre uma deliciosa farofa ou uma refrescante salada.",
-            "id": 6,
-            "nome": "Brasileirinho de Baby Beef",
-            "preco": "R$ 51.50"
-          }
-        ],
-        "nome": "Entrada"
+      "itens": [                          
+        {
+          "descricao": "Caldo com camarões, alho, cebola, coentro, pimentões, pimenta de cheiro mandioquinha e leite de coco. Acompanha 4 pãezinhos.",
+          "id": 5,
+          "nome": "Caldo de Camarão",
+          "preco": "R$ 64.00"
+        },
+        {
+          "descricao": "Torradas temperadas e 3 pães de queijo.",
+          "id": 7,
+          "nome": "Cesta de Pães e Torradas",
+          "preco": "R$ 22.00"
+        }, 
+        {
+          "descricao": "Camarões marinados, tomate seco com queijo minas frescal temperado, tomatesgrelhados com alho frito, caponata de berinjela e ceviche de salmão. Acompanha torradastemperadas e pães de queijo.",
+          "id": 6,
+          "nome": "Couvert Especial",
+          "preco": "R$ 65.00"
+        },        
+        {
+          "descricao": "100g de Cubos de filé, refogado com cebola roxa e molho barbecue. Acompanha batata frita.",
+          "id": 4,
+          "nome": "Entradinha Filé com Fritas",
+          "preco": "R$ 42.00"
+        },
+        {
+          "descricao": "260g de Iscas de peixe à milanesa com gergelim e molho tártaro.",
+          "id": 8,
+          "nome": "Isca de Peixe",
+          "preco": "R$ 72.00"
+        }                 
+      ],
+      "nome": "Entrada"
     },    
     {
       "itens": [
         {
+          "descricao": "Refeição completa com suculento Baby Beef, arroz, feijão, batatas fritas e a opção de escolher entre uma deliciosa farofa ou uma refrescante salada.",
+          "id": 3,
+          "nome": "Brasileirinho de Baby Beef",
+          "preco": "R$ 51.50"
+        },
+        {
           "descricao": "Delicioso prato de Filé de Frango, acompanhado por arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada.",
-          "id": 4,
+          "id": 1,
           "nome": "Brasileirinho de Frango",
           "preco": "R$ 47.90"
         },
         {
           "descricao": "Filé Mignon suculento, arroz, feijão, batatas fritas e escolha entre farofa ou uma refrescante salada.",
-          "id": 5,
+          "id": 2,
           "nome": "Brasileirinho de Filé Mignon",
           "preco": "R$ 55.00"
+        },        
+        {
+          "descricao": "400g de medalhões de filé mignon grelhados com bacon, flambados com conhaque e molho de mostarda. Acompanha arroz branco e batata ao murro.",
+          "id": 17,
+          "nome": "Filé ao Molho de Mostarda",
+          "preco": "R$ 47.90"
         },
         {
-          "descricao": "Refeição completa com suculento Baby Beef, arroz, feijão, batatas fritas e a opção de escolher entre uma deliciosa farofa ou uma refrescante salada.",
-          "id": 6,
-          "nome": "Brasileirinho de Baby Beef",
-          "preco": "R$ 51.50"
-        }        
+          "descricao": "Acompanhado de Arroz Branco, Feijão Carioca, Batata Chips e Vinagrete.",
+          "id": 18,
+          "nome": "Frango Crispy (1 Pessoa)",
+          "preco": "R$ 39.00"
+        },
+        {
+          "descricao": "Berinjelas empanadas envolvidas em molho de tomate fresco. Finalizadas ao forno com queijos muçarela e parmesão.",
+          "id": 19,
+          "nome": "Lasanha de Berinjela",
+          "preco": "R$ 50.00"
+        }          
       ],
-      "nome": "Almoço Executivo "
-    },
+      "nome": "Pratos "
+    },    
     {
       "itens": [
         {
-          "descricao": "Laranja, Abacaxi, Tangerina",
-          "id": 2,
-          "nome": "Suco Natural",
-          "preco": "R$ 12.50"
-        },
+          "descricao": "Água Mineral com ou sem gás.",
+          "id": 9,
+          "nome": "Água Mineral Prata",
+          "preco": "R$ 9.00"
+        },        
         {
           "descricao": "Mate da Casa com Limão",
-          "id": 9,
+          "id": 10,
           "nome": "Mate com Limão",
           "preco": "R$ 13.90"
         },
         {
           "descricao": "Coca-cola, Guaraná, Fanta e Sprite",
-          "id": 10,
+          "id": 11,
           "nome": "Refrigerante",
+          "preco": "R$ 12.50"
+        },
+        {
+          "descricao": "Laranja, Abacaxi, Tangerina",
+          "id": 12,
+          "nome": "Suco Natural",
           "preco": "R$ 12.50"
         }
       ],
@@ -90,14 +108,26 @@
     {
       "itens": [
         {
+          "descricao": "Delicioso e cremoso brigadeiro servido na taça. Coberto com bolinhas crocantes.",
+          "id": 13,
+          "nome": "Brigadeiro de Colher",
+          "preco": "R$ 25.00"
+        },
+        {
           "descricao": "Combinação refrescante de sabores naturais. (500ml)",
-          "id": 7,
+          "id": 14,
           "nome": "Salada de Frutas",
           "preco": "R$ 20.00"
         },
         {
+          "descricao": "Fatia de torta a base de cream cheese e geléia de morangos frescos sobre biscoito de chocolate.",
+          "id": 15,
+          "nome": "Pequeno Cheesecake",
+          "preco": "R$ 25.00"
+        },
+        {
           "descricao": "Doce equilibrado, massa nutritiva.",
-          "id": 8,
+          "id": 16,
           "nome": "Torta de Banana Integral",
           "preco": "R$ 29.90"
         }
