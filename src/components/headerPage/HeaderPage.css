@@ -23,15 +23,15 @@
     .rede-social{
         display: flex;
         flex-direction: row;        
-        gap: 16px;
-        height: 100%;
-        width: 100%;
+        gap: 8px;        
         align-items: center;
         justify-content: center;
+        width: auto;
+        height: 100%;          
 
-        img{
-            width: 24px;
-            height: 24px;            
+        img{            
+            width: 36px;
+            height: 36px;            
         }
     }
 }
@@ -43,11 +43,8 @@
     unicode-bidi: isolate;    
 }
 
-.itemMenu{       
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 10px;
-    padding-bottom: 10px;  
+.itemMenu{               
+    padding: 10px 8px 10px 8px; 
     
     a{
         font-family: "Roboto";

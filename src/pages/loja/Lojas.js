@@ -56,7 +56,7 @@ const Lojas = () => {
             <TituloPrincipal texto={"Nossas Lojas"}></TituloPrincipal>
             <div className="container-loja">
                 <div>
-                    <TabBar itens = { lojas } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
+                    <TabBar itens = { lojas } botaoSelecionado={lojaSelecionada?.nome} getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
                 </div>                
                 <div className="card-loja">
                     <div>

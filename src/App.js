@@ -1,11 +1,11 @@
 
 import { Outlet } from 'react-router-dom';
-import HeaderPage from './components/headerPage/HeaderPage'; 
+import HeaderPage from './components/headerPage/HeaderPage';
 import './App.css';
 
 function App() {
   return (
-    <div class="page">
+    <div className="page">
 
       <div>
         <HeaderPage></HeaderPage>

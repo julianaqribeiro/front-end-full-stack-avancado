@@ -51,7 +51,7 @@ const Cardapio = () => {
             <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
             <div className="container-tabBar">
                 <div>
-                    <TabBar itens = { categorias } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
+                    <TabBar itens = { categorias } botaoSelecionado={ itemSelecionado } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
                 </div>
                 <div>
                     <TituloSecudario texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
@@ -59,7 +59,7 @@ const Cardapio = () => {
                 <div className="container-itens-cardapio">
                 {                                 
                     itensCardapio.map((item) => 
-                        <ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio>
+                        <div><ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio></div>
                     )
                 }
                 </div>
