@@ -2,6 +2,11 @@
 
 Este é um projeto que faz parte do MVP especificado na **Disciplina Desenvolvimento Full Stack Avançado** do curso de **Pós-Graduação em Desenvolvimento Full Stack da PUC-Rio**. 
 
+O objetivo deste MVP foi planejar e prototipar a interface com o Figma e aplicar os conceitos os conceitos basicos do desenvolvimento de front-end com React explorando a componentização. 
+Utilizando os principios da componentização, foi possivel dividir a aplicação em componentes reutilizaveis. 
+Além disso foram utilizados recursos do React como: gerenciamento de estado, props e hocks (useState e useEffect).
+
+Link do prototipo de alta fidelidade do Figma: https://www.figma.com/design/PISl5opjmrk2e6rx2dx5X1/MVP---Front-End-Avan%C3%A7ado?node-id=0-1 
 
 
 ## Como executar
