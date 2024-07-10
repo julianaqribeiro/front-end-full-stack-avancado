@@ -54,12 +54,12 @@ const Cardapio = () => {
                     <TabBar itens = { categorias } botaoSelecionado={ itemSelecionado } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
                 </div>
                 <div>
-                    <TituloSecudario texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
+                    <TituloSecudario key={`item-${itemSelecionado}`} texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
                 </div> 
                 <div className="container-itens-cardapio">
                 {                                 
-                    itensCardapio.map((item) => 
-                        <div><ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio></div>
+                    itensCardapio.map((item, idx) => 
+                        <div key={`item-${idx}`}><ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio></div>
                     )
                 }
                 </div>

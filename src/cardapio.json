@@ -64,7 +64,7 @@
         {
           "descricao": "Acompanhado de Arroz Branco, Feijão Carioca, Batata Chips e Vinagrete.",
           "id": 18,
-          "nome": "Frango Crispy (1 Pessoa)",
+          "nome": "Frango Crispy",
           "preco": "R$ 39.00"
         },
         {
@@ -74,7 +74,7 @@
           "preco": "R$ 50.00"
         }          
       ],
-      "nome": "Pratos "
+      "nome": "Prato Principal"
     },    
     {
       "itens": [
