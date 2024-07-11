@@ -23,10 +23,10 @@ const HeaderPage = () => {
                 </div>
                 <div className="rede-social">
                     <div>
-                        <img src="/assets/instagram.svg" alt="instagram"></img>
+                        <img src="/assets/instagram.svg" alt="instagram" title='Em Construççao'></img>
                     </div>
                     <div>
-                        <img src="/assets/facebook.svg" alt="facebbok"></img>
+                        <img src="/assets/facebook.svg" alt="facebbok" title='Em Construççao'></img>
                     </div>                 
                 </div>        
             </div>            

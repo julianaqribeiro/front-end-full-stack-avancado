@@ -23,10 +23,10 @@ function App() {
         <div className='redes-sociais'>
           <div className='icones'>
             <div>
-              <img src="/assets/instagram-rodape.svg" alt="instagram"></img>
+              <img src="/assets/instagram-rodape.svg" alt="instagram" title='Em Construççao'></img>
             </div>
             <div>
-              <img src="/assets/facebook-rodape.svg" alt="facebbok"></img>
+              <img src="/assets/facebook-rodape.svg" alt="facebbok" title='Em Construççao'></img>
             </div>
           </div>
         </div>
