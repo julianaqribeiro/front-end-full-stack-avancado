@@ -8,7 +8,7 @@ const TabBar = ({ itens, botaoSelecionado, getCategoriaSelecionada }) => {
 
     function clickBotao(item){                
         setItemSelecionado(item.toUpperCase());
-        getCategoriaSelecionada(item.toUpperCase());
+        getCategoriaSelecionada(item.toUpperCase());        
     }
 
     function criarBotao(item, idx){
@@ -18,10 +18,10 @@ const TabBar = ({ itens, botaoSelecionado, getCategoriaSelecionada }) => {
             _botaoSelecionado = botaoSelecionado.toString().toUpperCase();
         }
 
-        return <button type="button" className='botao-tabBar' key={`item-${idx}`} 
-                        autoFocus={item.toUpperCase() === _botaoSelecionado}
-                        onClick={() => clickBotao(item.toUpperCase())}>
-                        { item.toUpperCase() }
+        return <button type="button" className={(item.toUpperCase() === (!itemSelecionado ? _botaoSelecionado : itemSelecionado)) ? "botao-tabBar-selecionado" : "botao-tabBar"} 
+                    key={`item-${idx}`}                         
+                    onClick={() => clickBotao(item.toUpperCase())}>
+                    { item.toUpperCase() }
                </button>;                                    
     }
 
