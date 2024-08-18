@@ -3,48 +3,60 @@ import TituloPrincipal from "../../components/tituloPrincipal/TituloPrincipal";
 import './Cardapio.css';
 import TabBar from "../../components/tabBar/TabBar"; 
 import { useState, useEffect } from 'react';
-import arquivoCardapio from "../../cardapio.json";
 import TituloSecudario from '../../components/tituloSecundario/TituloSecundario';
 import ItemCardapio from "../../components/itemCardapio/ItemCardapio";
 
 const Cardapio = () => {
     
+    const [data, setData] = useState(null);
     const [categorias, setCategorias] = useState([""]);
     const [itemSelecionado, setitemSelecionado] = useState('');
     const [itensCardapio, setItensCardapio] = useState([]);
 
     const getCategoriaSelecionada = (pItemSelecionado) => {
-                
-        const cardapio = [...arquivoCardapio.categorias];
-        cardapio.forEach(element => {
-            if (element.nome.toUpperCase() === pItemSelecionado){
-                setItensCardapio(element.itens);
-            }
-        });       
-        
-        setitemSelecionado(pItemSelecionado);        
+               
+        if (categorias){
+            const cardapio = [...categorias];
+            cardapio.forEach(element => {
+                if (element.nome?.toUpperCase() === pItemSelecionado){
+                    setItensCardapio(element.itens);
+                }
+            });       
+            
+            setitemSelecionado(pItemSelecionado);  
+        }             
     }
 
     useEffect(() => { 
-
-        const categorias = [];
-        arquivoCardapio.categorias.forEach(element => {
-            categorias.push(element.nome);
-        });        
-        setCategorias(categorias);   
-        setitemSelecionado(categorias[0]);                   
-    },[])
+                
+        fetch('http://localhost:5000/cardapio')
+        .then(response => response.json())
+        .then(json => { setData(json); })
+        .then(x => {
+            if (data != null && data.categorias != null){
+                const categorias = [];
+                data.categorias.forEach(element => {
+                    categorias.push(element.nome);
+                });        
+                setCategorias(categorias);   
+                setitemSelecionado(categorias[0]);
+            }            
+        })
+        .catch(error => console.error(error));
+                                     
+    },[data])
 
     useEffect(() => { 
 
-        setItensCardapio([]);
-        arquivoCardapio.categorias.forEach(element => {
-            if (element.nome.toUpperCase() === itemSelecionado.toUpperCase()){
-                setItensCardapio([...element.itens]);                 
-            }                                     
-        }); 
-                                            
-    },[itemSelecionado])
+        if (data && data.categorias) {
+            setItensCardapio([]);
+            data.categorias.forEach(element => {
+                if (element.nome.toUpperCase() === itemSelecionado.toUpperCase()){
+                    setItensCardapio([...element.itens]);                 
+                }                                     
+            }); 
+        }                                                    
+    },[data, itemSelecionado])
     
     return (
         <div>
