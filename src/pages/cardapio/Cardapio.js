@@ -8,6 +8,7 @@ import ItemCardapio from "../../components/itemCardapio/ItemCardapio";
 
 const Cardapio = () => {
     
+    const [loading, setLoading] = useState(true); 
     const [data, setData] = useState(null);
     const [categorias, setCategorias] = useState([""]);
     const [itemSelecionado, setitemSelecionado] = useState('');
@@ -28,21 +29,25 @@ const Cardapio = () => {
     }
 
     useEffect(() => { 
-                
+
         fetch('http://localhost:5000/cardapio')
         .then(response => response.json())
-        .then(json => { setData(json); })
-        .then(x => {
-            if (data != null && data.categorias != null){
-                const categorias = [];
-                data.categorias.forEach(element => {
-                    categorias.push(element.nome);
-                });        
-                setCategorias(categorias);   
-                setitemSelecionado(categorias[0]);
-            }            
-        })
+        .then(json => { setData(json); })        
         .catch(error => console.error(error));
+                                     
+    },[])
+
+    useEffect(() => { 
+
+        if (data != null && data.categorias != null){
+            const categorias = [];
+            data.categorias.forEach(element => {
+                categorias.push(element.nome);
+            });        
+            setCategorias(categorias);   
+            setitemSelecionado(categorias[0]);
+            setLoading(false);
+        }
                                      
     },[data])
 
@@ -58,26 +63,41 @@ const Cardapio = () => {
         }                                                    
     },[data, itemSelecionado])
     
-    return (
-        <div>
-            <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
-            <div className="container-tabBar">
-                <div>
-                    <TabBar itens = { categorias } botaoSelecionado={ itemSelecionado } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
-                </div>
-                <div>
-                    <TituloSecudario key={`item-${itemSelecionado}`} texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
-                </div> 
-                <div className="container-itens-cardapio">
-                {                                 
-                    itensCardapio.map((item, idx) => 
-                        <div key={`item-${idx}`}><ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio></div>
-                    )
-                }
+    
+    if (loading){
+
+        return (
+            <div>
+                <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
+                <div className="container-tabBar">
+                    <span>carregando...</span>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
+    else {
+    
+        return (
+            <div>
+                <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
+                <div className="container-tabBar">
+                    <div>
+                        <TabBar itens = { categorias } botaoSelecionado={ itemSelecionado } getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
+                    </div>
+                    <div>
+                        <TituloSecudario key={`item-${itemSelecionado}`} texto={ itemSelecionado.toUpperCase() }></TituloSecudario> 
+                    </div> 
+                    <div className="container-itens-cardapio">
+                    {                                 
+                        itensCardapio.map((item, idx) => 
+                            <div key={`item-${idx}`}><ItemCardapio nome={ item.nome } descricao={ item.descricao } preco={ item.preco }></ItemCardapio></div>
+                        )
+                    }
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Cardapio
