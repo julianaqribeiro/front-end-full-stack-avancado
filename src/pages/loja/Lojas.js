@@ -10,34 +10,47 @@ import TextoDescricao from "../../components/textoDescricao/TextoDescricao";
 
 const Lojas = () => {
 
+    const [loading, setLoading] = useState(true); 
+    const [data, setData] = useState(null);
     const [lojas, setLojas] = useState([""]);
     const [itemSelecionado, setitemSelecionado] = useState('');
     const [lojaSelecionada, setlojaSelecionada] = useState(undefined);
 
-
     useEffect(() => { 
-
-        const listaNomeLoja = [];
-        arquivoLoja.lojas.forEach(element => {
-            listaNomeLoja.push(element.nome);
-        });   
-        
-        setLojas(listaNomeLoja);
-        setitemSelecionado(listaNomeLoja[0]);
-        setlojaSelecionada(arquivoLoja.lojas[0]);
+        fetch('http://localhost:5000/lojas')
+        .then(response => response.json())
+        .then(json => { setData(json); })        
+        .catch(error => console.error(error));
+                                     
     },[])
 
     useEffect(() => { 
 
-        setlojaSelecionada(undefined);
-        const lojas = [...arquivoLoja.lojas];        
-        lojas.forEach(element => {
-            if (element.nome.toUpperCase() === itemSelecionado.toUpperCase()){
-                setlojaSelecionada(element);                              
-            }                                     
-        }); 
-                                            
-    },[itemSelecionado])
+        if (data && data.lojas){
+            const listaNomeLoja = [];
+            data.lojas.forEach(element => {
+                listaNomeLoja.push(element.nome);
+            });   
+            
+            setLojas(listaNomeLoja);
+            setitemSelecionado(listaNomeLoja[0]);
+            setlojaSelecionada(arquivoLoja.lojas[0]);
+            setLoading(false);
+        }
+    },[data])
+
+    useEffect(() => { 
+
+        if (data && data.lojas){
+            setlojaSelecionada(undefined);               
+            data.lojas.forEach(element => {
+                if (element.nome.toUpperCase() === itemSelecionado.toUpperCase()){
+                    setlojaSelecionada(element);                              
+                }                                     
+            }); 
+        }
+                                                    
+    },[data, itemSelecionado])
 
     const getCategoriaSelecionada = (pItemSelecionado) => {
                         
@@ -51,47 +64,61 @@ const Lojas = () => {
         setitemSelecionado(pItemSelecionado); 
     }
 
-    return (
-        <div>
-            <TituloPrincipal texto={"Nossas Lojas"}></TituloPrincipal>
-            <div className="container-loja">
-                <div>
-                    <TabBar itens = { lojas } botaoSelecionado={lojaSelecionada?.nome} getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
-                </div>                
-                <div className="card-loja">
-                    <div>
-                        <TituloSecudario texto={ itemSelecionado.toUpperCase() }></TituloSecudario>
-                    </div>                    
-                    <div className="loja">
-                        <div className="imagem-loja" style={{backgroundImage: "url(" + lojaSelecionada?.imagem + ")", backgroundSize: 'cover'}}>                            
-                        </div>                        
-                        <div className="info-loja">
-                            <div className="endereco">
-                                <div><TextoDestaque texto={ lojaSelecionada?.endereco }></TextoDestaque></div>
-                                <div>
-                                    <TextoDestaque texto={ lojaSelecionada?.bairro + ", " + lojaSelecionada?.cidade +" - " + lojaSelecionada?.UF + ", " + lojaSelecionada?.cep}>
-                                    </TextoDestaque>
-                                </div>
-                            </div>
-                            <div className="horario">
-                                <div className="texto-destaque">
-                                    <TextoDestaque imagem="/assets/Clock.jpg" texto="Horário de Funcionamento:"></TextoDestaque>
-                                </div>
-                                <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.funcionamentoSegSab }></TextoDescricao></div>
-                                <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.funcionamentoDomFeriado }></TextoDescricao></div>
-                            </div>
-                            <div className="telefone">
-                                <div className="texto-destaque">                                    
-                                    <TextoDestaque imagem="/assets/Phone.jpg" texto="Telefone:"></TextoDestaque>
-                                </div>
-                                <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.telefones }></TextoDescricao></div>                                
-                            </div>
-                        </div>
-                    </div>                    
+    if (loading){
+
+        return (
+            <div>
+                <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
+                <div className="container-tabBar">
+                    <span>carregando...</span>
                 </div>
-            </div>     
-        </div>
-    );        
+            </div>
+        );
+    }
+    else {
+
+        return (
+            <div>
+                <TituloPrincipal texto={"Nossas Lojas"}></TituloPrincipal>
+                <div className="container-loja">
+                    <div>
+                        <TabBar itens = { lojas } botaoSelecionado={lojaSelecionada?.nome} getCategoriaSelecionada={getCategoriaSelecionada}></TabBar>
+                    </div>                
+                    <div className="card-loja">
+                        <div>
+                            <TituloSecudario texto={ itemSelecionado.toUpperCase() }></TituloSecudario>
+                        </div>                    
+                        <div className="loja">
+                            <div className="imagem-loja" style={{backgroundImage: "url(" + lojaSelecionada?.foto + ")", backgroundSize: 'cover'}}>                            
+                            </div>                        
+                            <div className="info-loja">
+                                <div className="endereco">
+                                    <div><TextoDestaque texto={ lojaSelecionada?.endereco + ", " + lojaSelecionada?.numero + " - " + lojaSelecionada?.complemento }></TextoDestaque></div>
+                                    <div>
+                                        <TextoDestaque texto={ lojaSelecionada?.bairro + ", " + lojaSelecionada?.cidade +" - " + lojaSelecionada?.uf + ", " + lojaSelecionada?.cep}>
+                                        </TextoDestaque>
+                                    </div>
+                                </div>
+                                <div className="horario">
+                                    <div className="texto-destaque">
+                                        <TextoDestaque imagem="/assets/Clock.jpg" texto="Horário de Funcionamento:"></TextoDestaque>
+                                    </div>
+                                    <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.horario_seg_sab }></TextoDescricao></div>
+                                    <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.horario_dom_feriado }></TextoDescricao></div>
+                                </div>
+                                <div className="telefone">
+                                    <div className="texto-destaque">                                    
+                                        <TextoDestaque imagem="/assets/Phone.jpg" texto="Telefone:"></TextoDestaque>
+                                    </div>
+                                    <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.telefone }></TextoDescricao></div>                                
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>     
+            </div>
+        );
+    }    
 }
 
 export default Lojas
