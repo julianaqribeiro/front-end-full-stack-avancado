@@ -67,23 +67,41 @@ const FaleConosco = () => {
     async function clickEnviar() {
         
         if (validarCampos())
-        {                        
-            const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nome: nome, email: email, telefone: telefone, mensagem: mensagem })
-            };
-
-            await fetch('http://localhost:5000/fale_conosco', requestOptions);            
-            toast.success("Mensagem enviada com sucesso !", {
-                duration: 4000,
-                position: 'top-right',
-            }); 
-            
-            setNome('');
-            setTelefone('');
-            setEmail('');
-            setMensagem('');
+        {   
+            let formData = new FormData();
+            formData.append('nome', nome);
+            formData.append('email', email);
+            formData.append('telefone', telefone);
+            formData.append('mensagem', mensagem);
+                        
+            fetch('http://localhost:5000/fale-conosco', {
+                method: 'post',
+                body: formData
+              })
+            .then((response) => { 
+                response.json(); 
+                if (response.status === 200){        
+                    toast.success("Mensagem enviada com sucesso !", {
+                        duration: 4000,
+                        position: 'top-right',
+                    }); 
+                    setNome('');
+                    setTelefone('');
+                    setEmail('');
+                    setMensagem('');
+                }
+                else{
+                    toast.success("Erro ao enviar mensagem !", {
+                        duration: 4000,
+                        position: 'top-right',
+                    }); 
+                }      
+            })        
+            .catch((error) => {
+                alert("Erro ao enviar mensagem.");
+                console.error('Error:', error);
+            });            
+                    
         }
     }
     
