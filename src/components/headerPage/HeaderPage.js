@@ -20,6 +20,9 @@ const HeaderPage = () => {
                     <div className="itemMenu">
                         <Link to={"/lojas"}>LOJAS</Link>
                     </div>
+                    <div className="itemMenu">
+                        <Link to={"/faleconosco"}>FALE CONOSCO</Link>
+                    </div>
                 </div>
                 <div className="rede-social">
                     <div>

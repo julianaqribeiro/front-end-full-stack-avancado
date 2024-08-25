@@ -68,7 +68,7 @@ const Lojas = () => {
 
         return (
             <div>
-                <TituloPrincipal texto={"Cardápio"}></TituloPrincipal>
+                <TituloPrincipal texto={"Nossas Lojas"}></TituloPrincipal>
                 <div className="container-tabBar">
                     <span>carregando...</span>
                 </div>

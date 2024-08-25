@@ -1,0 +1,55 @@
+.form-faleconosco{
+    display: flex;
+    flex-direction: column;        
+    gap: 16px;    
+    padding: 16px;
+    width: 100%;    
+}
+
+.div-botao-enviar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+    width: 50%;
+    padding-left: 8px;
+    padding-bottom: 8px;      
+}
+
+.botao-enviar{
+    height: 36px;
+    width: 91px;
+    background-color: #ED5D3C;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    letter-spacing: 1.25px;
+    cursor: pointer;    
+}
+
+.nome-campo{
+    width: 60px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: right;    
+}
+
+.campo{
+    width: 50%;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.campo-mensagem{
+    width: 50%;
+    height: 100px;
+    resize: none;
+}
+
+tr{
+    height: 40px;
+}
