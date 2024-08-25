@@ -9,6 +9,7 @@ import Home from './pages/home/Home.js';
 import Cardapio from './pages/cardapio/Cardapio.js';
 import Lojas from './pages/loja/Lojas';
 import FaleConosco from './pages/fale-conosco/FaleConosco.js';
+import Fidelidade from './pages/fidelidade/Fidelidade.js';
 
 const router = createBrowserRouter([
   { path:"/", 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path:"/", element: <Home/> },
       { path:"cardapio", element: <Cardapio/> },
       { path:"lojas", element: <Lojas/> },
+      { path:"fidelidade", element: <Fidelidade/> },
       { path:"faleconosco", element: <FaleConosco/> },
   ] },  
 ]);

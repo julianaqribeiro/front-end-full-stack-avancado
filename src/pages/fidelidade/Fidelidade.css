@@ -1,0 +1,49 @@
+.form-fidelidade{
+    display: flex;
+    flex-direction: column;        
+    gap: 16px;    
+    padding: 16px;
+    width: 100%;    
+}
+
+.div-botao-fidelidade{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+    width: 30%;
+    padding-left: 8px;
+    padding-bottom: 8px;      
+}
+
+.botao-fidelidade{
+    height: 36px;
+    width: 91px;
+    background-color: #ED5D3C;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    letter-spacing: 1.25px;
+    cursor: pointer;    
+}
+
+.nome-campo-fidelidade{
+    width: 60px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: right;    
+}
+
+.campo-fidelidade{
+    width: 30%;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+tr{
+    height: 40px;
+}
