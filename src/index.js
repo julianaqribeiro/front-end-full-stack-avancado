@@ -10,6 +10,7 @@ import Cardapio from './pages/cardapio/Cardapio.js';
 import Lojas from './pages/loja/Lojas';
 import FaleConosco from './pages/fale-conosco/FaleConosco.js';
 import Fidelidade from './pages/fidelidade/Fidelidade.js';
+import Reserva from './pages/reserva/Reserva.js';
 
 const router = createBrowserRouter([
   { path:"/", 
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path:"lojas", element: <Lojas/> },
       { path:"fidelidade", element: <Fidelidade/> },
       { path:"faleconosco", element: <FaleConosco/> },
+      { path:"reserva", element: <Reserva/> },
   ] },  
 ]);
 

@@ -1,10 +1,10 @@
-import './Fidelidade.css';
+import './Reserva.css';
 import TituloPrincipal from "../../components/tituloPrincipal/TituloPrincipal";
 import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {useState} from 'react';
 
-const Fidelidade = () => {
+const Reserva = () => {
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -67,7 +67,7 @@ const Fidelidade = () => {
             .then((response) => { 
                 response.json(); 
                 if (response.status === 200){        
-                    toast.success("Cliente cadastrado no Programa Fidelidade !", {
+                    toast.success("Cliente cadastrado no Reserva !", {
                         duration: 4000,
                         position: 'top-right',
                     }); 
@@ -76,63 +76,87 @@ const Fidelidade = () => {
                     setEmail('');                    
                 }
                 else if (response.status === 409){
-                    toast.warning("Cliente já cadastrado no Programa Fidelidade !", {
+                    toast.warning("Cliente já cadastrado no Reserva !", {
                         duration: 4000,
                         position: 'top-right',
                     }); 
                 }
                 else{
-                    toast.erro("Erro no cadastro no Programa Fidelidade !", {
+                    toast.erro("Erro no cadastro no Reserva !", {
                         duration: 4000,
                         position: 'top-right',
                     }); 
                 }
             })        
             .catch((error) => {
-                alert("Erro ao inserir cliente no Programa Fidelidade.");
+                alert("Erro ao inserir uma Reserva.");
                 console.error('Error:', error);
             });            
                     
         }
     }
-    
+
     return (
         <div>
-            <TituloPrincipal texto={"Programa Fidelidade"}></TituloPrincipal>  
+            <TituloPrincipal texto={"Reserva"}></TituloPrincipal>  
 
-            <form className="form-fidelidade">
+            <form className="form-reserva">
                 <table>
                     <tbody>
                         <tr>
-                            <td className='nome-campo-fidelidade'>Nome:</td>
+                            <td className='nome-campo-reserva'>Nome:</td>
                             <td>
-                                <input className='campo-fidelidade' type="text" 
+                                <input className='campo-reserva' type="text" 
                                     name="nome" id="nome" value={nome}                                     
                                     onChange={handleChangeNome}/>
                             </td>
                         </tr>
                         <tr>
-                            <td className='nome-campo-fidelidade'>Email:</td>
+                            <td className='nome-campo-reserva'>Email:</td>
                             <td>
-                                <input className='campo-fidelidade' type="text" 
+                                <input className='campo-reserva' type="text" 
                                     name="email" id="email" value={email}                                     
                                     onChange={handleChangeEmail}/>
                             </td>
                         </tr>
                         <tr>
-                            <td className='nome-campo-fidelidade'>Telefone:</td>
+                            <td className='nome-campo-reserva'>Telefone:</td>
                             <td>
-                                <input className='campo-fidelidade' type="text" 
+                                <input className='campo-reserva' type="text" 
                                     name="telefone" id="telefone" value={telefone}                                     
                                     onChange={handleChangeTelefone}/>
                             </td>
-                        </tr>                        
+                        </tr>
+                        <tr>
+                            <td className='nome-campo-reserva'>Data:</td>
+                            <td>
+                                <input className='campo-reserva' type="text" 
+                                    name="telefone" id="telefone" value={telefone}                                     
+                                    onChange={handleChangeTelefone}/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='nome-campo-reserva'>Horario:</td>
+                            <td>
+                                <input className='campo-reserva' type="text" 
+                                    name="telefone" id="telefone" value={telefone}                                     
+                                    onChange={handleChangeTelefone}/>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <td className='nome-campo-reserva'>Quantidade de Pessoas:</td>
+                            <td>
+                                <input className='campo-reserva' type="text" 
+                                    name="telefone" id="telefone" value={telefone}                                     
+                                    onChange={handleChangeTelefone}/>
+                            </td>
+                        </tr>               
                         <tr>
                             <td>                                
                             </td>
                             <td>
-                                <div className="div-botao-fidelidade">
-                                    <button type="button" className='botao-fidelidade' onClick={clickEnviar}>ENVIAR</button>
+                                <div className="div-botao-reserva">
+                                    <button type="button" className='botao-reserva' onClick={clickEnviar}>ENVIAR</button>
                                     <ToastContainer />
                                 </div>
                             </td>                           
@@ -142,7 +166,7 @@ const Fidelidade = () => {
             </form>
         </div>
     );
-    
+
 }
 
-export default Fidelidade
+export default Reserva

@@ -21,6 +21,9 @@ const HeaderPage = () => {
                         <Link to={"/lojas"}>LOJAS</Link>
                     </div>
                     <div className="itemMenu">
+                        <Link to={"/reserva"}>RESERVA</Link>
+                    </div>
+                    <div className="itemMenu">
                         <Link to={"/fidelidade"}>PROGRAMA FIDELIDADE</Link>
                     </div>
                     <div className="itemMenu">

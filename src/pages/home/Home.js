@@ -13,7 +13,11 @@ const Home = () => {
 
    const goToLojas = () => {        
     navigate("/lojas");        
-};
+   };
+
+   const goToReserva = () => {        
+    navigate("/reserva");        
+   };
 
     return (            
         <div className="container">
@@ -25,6 +29,11 @@ const Home = () => {
             <div>
                 <CardPagina titulo={"Lojas"} textButton={"Lojas"} background={"/assets/lojas.jpg"}
                     descricao={"Veja a loja mais próxima de vc e venha nos visitar."} handleClick={goToLojas}>
+                </CardPagina>
+            </div>
+            <div>
+                <CardPagina titulo={"Reserva"} textButton={"Reserva"} background={"/assets/reserva.jpeg"}
+                    descricao={"Faça a sua reserva e garanta o seu lugar."} handleClick={goToReserva}>
                 </CardPagina>
             </div>
         </div>                    
