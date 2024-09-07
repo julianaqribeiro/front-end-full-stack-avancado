@@ -7,6 +7,8 @@ import TabBar from "../../components/tabBar/TabBar";
 import './Lojas.css';
 import TextoDestaque from "../../components/textoDestaque/TextoDestaque";
 import TextoDescricao from "../../components/textoDescricao/TextoDescricao";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 const Lojas = () => {
 
@@ -112,6 +114,19 @@ const Lojas = () => {
                                     </div>
                                     <div className="descricao"><TextoDescricao texto={ lojaSelecionada?.telefone }></TextoDescricao></div>                                
                                 </div>
+                            </div>
+                            <div className="mapa-loja">
+                                <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                                    <TileLayer
+                                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+                                    <Marker position={[51.505, -0.09]}>
+                                    <Popup>
+                                        A pretty CSS3 popup. <br /> Easily customizable.
+                                    </Popup>
+                                    </Marker>
+                                </MapContainer>
                             </div>
                         </div>                    
                     </div>

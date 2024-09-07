@@ -19,8 +19,8 @@
 }
 
 .imagem-loja{
-    height: 245px;
-    width: 245px;       
+    height: 300px;
+    width: 300px;       
 }
 
 .info-loja{
@@ -51,4 +51,13 @@
 
 .descricao{
     padding-left: 32px;
+}
+
+.mapa-loja{
+    margin-left: 32px;
+}
+
+.leaflet-container{
+    width: 300px;
+    height: 300px;
 }

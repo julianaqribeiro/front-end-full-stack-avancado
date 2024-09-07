@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content: flex-end;
     height: auto;
-    width: 30%;
+    width: 300px;
     padding-left: 8px;
     padding-bottom: 8px;      
 }
@@ -24,11 +24,11 @@
     border: 0px;
     border-radius: 4px;
     letter-spacing: 1.25px;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .nome-campo-reserva{
-    width: 60px;
+    width: 100px;
     color: rgba(0, 0, 0, 0.6);
     font-size: 16px;
     line-height: 20px;
@@ -37,7 +37,15 @@
 }
 
 .campo-reserva{
-    width: 30%;
+    width: 300px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.campo-reserva-qtdpessoas{
+    width: 100px;
     color: rgba(0, 0, 0, 0.6);
     font-size: 16px;
     line-height: 20px;
