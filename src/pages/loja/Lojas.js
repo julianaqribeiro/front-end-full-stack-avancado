@@ -1,14 +1,19 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import arquivoLoja from "../../loja.json";
 import TituloPrincipal from "../../components/tituloPrincipal/TituloPrincipal"; 
 import TituloSecudario from '../../components/tituloSecundario/TituloSecundario';
 import TabBar from "../../components/tabBar/TabBar"; 
 import './Lojas.css';
 import TextoDestaque from "../../components/textoDestaque/TextoDestaque";
 import TextoDescricao from "../../components/textoDescricao/TextoDescricao";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+
+const CenterUpdater = ({ center }) => {
+    const map = useMap();
+    map.setView(center);
+    return null;
+};
 
 const Lojas = () => {
 
@@ -17,6 +22,7 @@ const Lojas = () => {
     const [lojas, setLojas] = useState([""]);
     const [itemSelecionado, setitemSelecionado] = useState('');
     const [lojaSelecionada, setlojaSelecionada] = useState(undefined);
+    const [center, setCenter] = useState([-22.9035, -43.2096]); 
 
     useEffect(() => { 
         fetch('http://localhost:5000/lojas')
@@ -36,7 +42,7 @@ const Lojas = () => {
             
             setLojas(listaNomeLoja);
             setitemSelecionado(listaNomeLoja[0]);
-            setlojaSelecionada(arquivoLoja.lojas[0]);
+            setlojaSelecionada(data.lojas[0]);            
             setLoading(false);
         }
     },[data])
@@ -47,23 +53,44 @@ const Lojas = () => {
             setlojaSelecionada(undefined);               
             data.lojas.forEach(element => {
                 if (element.nome.toUpperCase() === itemSelecionado.toUpperCase()){
-                    setlojaSelecionada(element);                              
+                    setlojaSelecionada(element);                                                  
                 }                                     
             }); 
         }
                                                     
-    },[data, itemSelecionado])
+    },[data, itemSelecionado])    
 
     const getCategoriaSelecionada = (pItemSelecionado) => {
                         
-        const lojas = [...arquivoLoja.lojas];
+        const lojas = [...data.lojas];
         lojas.forEach(element => {
             if (element.nome.toUpperCase() === pItemSelecionado){
                 setlojaSelecionada(element);
+                setCenterLojaSelecionada(element);              
             }
         });       
         
         setitemSelecionado(pItemSelecionado); 
+    }
+
+    const setCenterLojaSelecionada = (ploja) => { 
+        
+        const endereco = `${ploja?.endereco}, ${ploja?.numero}, ${ploja?.cidade}, Brasil`;
+        const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(endereco)}&format=json&addressdetails=1`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+
+
+                    setCenter([data[0].lat, data[0].lon]);                                       
+                } else {
+                    console.log('Endereço não encontrado.');
+                }
+            })
+            .catch(error => console.error('Erro:', error));
+
     }
 
     if (loading){
@@ -116,16 +143,17 @@ const Lojas = () => {
                                 </div>
                             </div>
                             <div className="mapa-loja">
-                                <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                                <MapContainer center={center} zoom={13} scrollWheelZoom={false}>
                                     <TileLayer
                                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                     />
-                                    <Marker position={[51.505, -0.09]}>
-                                    <Popup>
-                                        A pretty CSS3 popup. <br /> Easily customizable.
-                                    </Popup>
+                                    <Marker position={center}>
+                                        <Popup>
+                                            {lojaSelecionada?.endereco}
+                                        </Popup>                                        
                                     </Marker>
+                                    <CenterUpdater center={center} />
                                 </MapContainer>
                             </div>
                         </div>                    
