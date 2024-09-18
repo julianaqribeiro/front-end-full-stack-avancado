@@ -2,9 +2,15 @@
 
 Este é um projeto que faz parte do MVP especificado na **Disciplina Back End Avançado** do curso de **Pós-Graduação em Desenvolvimento Full Stack da PUC-Rio**. 
 
-O objetivo deste MVP foi planejar e prototipar a interface com o Figma e aplicar os conceitos basicos do desenvolvimento de front-end com React explorando a componentização. 
+O objetivo deste MVP é desenvolver um sistema composto por três componentes que se comunicam, seguindo o padrão REST.
+
+![alt text](arquitetura-projeto.png)
+
+Aqui foi implementado o componente A da arquiteura acima aplicando os conceitos basicos do desenvolvimento de front-end com React explorando a componentização. 
 Utilizando os principios da componentização, foi possivel dividir a aplicação em componentes reutilizaveis. 
-Além disso foram utilizados recursos do React como: gerenciamento de estado, props e hocks (useState e useEffect). 
+Além disso foram utilizados recursos do React como: gerenciamento de estado, props e hocks (useState e useEffect).
+
+A API externa, que corresponde ao componente B, utilizada foi: https://www.openstreetmap.org/copyright 
 
 
 ## Como executar através do Docker
