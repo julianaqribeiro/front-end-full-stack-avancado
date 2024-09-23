@@ -44,6 +44,7 @@ const Lojas = () => {
             setitemSelecionado(listaNomeLoja[0]);
             setlojaSelecionada(data.lojas[0]);            
             setLoading(false);
+            setCenterLojaSelecionada(data.lojas[0]); 
         }
     },[data])
 
@@ -74,7 +75,7 @@ const Lojas = () => {
     }
 
     const setCenterLojaSelecionada = (ploja) => { 
-        
+                
         const endereco = `${ploja?.endereco}, ${ploja?.numero}, ${ploja?.cidade}, Brasil`;
         const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(endereco)}&format=json&addressdetails=1`;
 
@@ -82,9 +83,7 @@ const Lojas = () => {
             .then(response => response.json())
             .then(data => {
                 if (data.length > 0) {
-
-
-                    setCenter([data[0].lat, data[0].lon]);                                       
+                    setCenter([data[0].lat, data[0].lon]);                                                      
                 } else {
                     console.log('Endereço não encontrado.');
                 }
